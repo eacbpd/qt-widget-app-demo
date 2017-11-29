@@ -1,0 +1,18 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resource/close.png</file>
+        <file>resource/delete.png</file>
+        <file>resource/file.png</file>
+        <file>resource/folder.png</file>
+        <file>resource/headm.png</file>
+        <file>resource/headw.png</file>
+        <file>resource/help.png</file>
+        <file>resource/info.png</file>
+        <file>resource/new.png</file>
+        <file>resource/save.png</file>
+        <file>resource/settings.png</file>
+        <file>resource/share.png</file>
+        <file>resource/start.png</file>
+        <file>resource/user.png</file>
+    </qresource>
+</RCC>
