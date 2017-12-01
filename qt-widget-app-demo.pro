@@ -18,7 +18,11 @@ SOURCES += main.cpp\
     listwidget.cpp \
     tablewidget.cpp \
     mylistdelegate.cpp \
-    tabwidget.cpp
+    tabwidget.cpp \
+    stackedwidget.cpp \
+    notepad.cpp \
+    painter.cpp
+
 
 
 HEADERS  += mainwindow.h \
@@ -26,14 +30,22 @@ HEADERS  += mainwindow.h \
     listwidget.h \
     tablewidget.h \
     mylistdelegate.h \
-    tabwidget.h
+    tabwidget.h \
+    stackedwidget.h \
+    notepad.h \
+    painter.h
+
 
 
 FORMS    += mainwindow.ui \
     treewidget.ui \
     listwidget.ui \
     tablewidget.ui \
-    tabwidget.ui
+    tabwidget.ui \
+    stackedwidget.ui \
+    notepad.ui \
+    painter.ui
+
 
 RESOURCES += \
     resource.qrc

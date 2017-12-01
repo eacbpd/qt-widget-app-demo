@@ -24,7 +24,7 @@
     <item>
      <widget class="QTabWidget" name="MainTabWidget">
       <property name="currentIndex">
-       <number>0</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
@@ -63,6 +63,26 @@
        <layout class="QHBoxLayout" name="horizontalLayout_5">
         <item>
          <widget class="TabWidget" name="widgettab" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_5">
+       <attribute name="title">
+        <string>StackedWidget</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="StackedWidget" name="widget" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_6">
+       <attribute name="title">
+        <string>Painter</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="Painter" name="widget_2" native="true"/>
         </item>
        </layout>
       </widget>
@@ -147,6 +167,18 @@
    <class>TabWidget</class>
    <extends>QWidget</extends>
    <header>tabwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>StackedWidget</class>
+   <extends>QWidget</extends>
+   <header>stackedwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>Painter</class>
+   <extends>QWidget</extends>
+   <header>painter.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

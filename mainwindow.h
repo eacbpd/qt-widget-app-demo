@@ -5,6 +5,8 @@
 #include <QTimer>
 #include <QTime>
 #include <QLabel>
+#include <QPushButton>
+#include <QAction>
 namespace Ui {
 class MainWindow;
 }
@@ -18,10 +20,12 @@ public:
     ~MainWindow();
     void timerEvent(QTimerEvent *event);
     void helpmsg();
+    void findinfo();
 private:
     Ui::MainWindow *ui;
     int m_timer;
     QLabel *m_timelab;
+    QAction *m_action;
 };
 
 #endif // MAINWINDOW_H

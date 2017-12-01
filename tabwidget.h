@@ -4,7 +4,6 @@
 #include <QWidget>
 #include <QFileDialog>
 #include <fstream>
-//#include <iostream>
 #include <unistd.h>
 using namespace std;
 namespace Ui {
@@ -21,6 +20,7 @@ public:
     void getfilename();
     void fileexist();
     void openfile();
+    void savefile();
     void btnadd();
     void btndel();
 private:

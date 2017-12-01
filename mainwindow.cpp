@@ -13,14 +13,16 @@ MainWindow::MainWindow(QWidget *parent) :
     m_timelab->setAlignment(Qt::AlignHCenter);
     ui->statusBar->addWidget(m_timelab);
 
-    connect(ui->actionHelp,SIGNAL(triggered()),this,SLOT(helpmsg()));
-    QLineEdit *qle = new QLineEdit;
-    //qle->setMaximumSize(QSize(100,20));
-    ui->mainToolBar->insertWidget(ui->actionHelp,qle);
-
     //ui->statusBar->showMessage("loging...",5000);
     //ui->mainToolBar->hide();
     connect(ui->actionHelp,&QAction::triggered,this,&MainWindow::helpmsg);
+
+    QLineEdit *qle = new QLineEdit;
+    //qle->setMaximumSize(QSize(100,20));
+    m_action = ui->mainToolBar->addWidget(qle);
+    //m_action->setVisible(false);
+    connect(qle,&QLineEdit::textChanged,m_action,&QAction::trigger);
+    connect(m_action,&QAction::triggered,this,&MainWindow::findinfo);
 }
 
 MainWindow::~MainWindow()
@@ -40,4 +42,9 @@ void MainWindow::timerEvent(QTimerEvent *event)
 void MainWindow::helpmsg()
 {
     QMessageBox::information(this,"you have new message","look at me"/*,QMessageBox::StandardButton::Ok*/);
+}
+
+void MainWindow::findinfo()
+{
+
 }
