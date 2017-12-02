@@ -35,17 +35,16 @@ void TabWidget::fileexist()
 
 void TabWidget::openfile()
 {
-    ifstream ifs;
-    char str[1024];
-    ifs.open(ui->lineEdit->text().toStdString().c_str(),ios::in);
+    ifstream ifs(ui->lineEdit->text().toStdString().c_str());
+    char str[0x1000];
 
-    ifs.read(str,sizeof(str));
-    while(ifs.gcount()!=0)
+    ifs.getline(str,sizeof(str));
+    while(ifs)//ifs.gcount()!=0//
     {
     ui->textBrowser->append(str);
-    ifs.read(str,sizeof(str));
+    ifs.getline(str,sizeof(str));//read(str,sizeof(str));
     }
-    ifs.close();
+    //ifs.close();
 }
 
 void TabWidget::savefile()
