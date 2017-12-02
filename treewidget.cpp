@@ -13,15 +13,16 @@ TreeWidget::TreeWidget(QWidget *parent) :
     QStringList filterlist;
     //filterlist<<"*.txt";        //1 select *.txt
     //filterlist.append("*.log"); //2
-    filterlist.push_back("*");  //3
-
-    QStringList filelist = dir.entryList(filterlist);
+    filterlist.push_back("*");    //3
+    QStringList filelist = dir.entryList(/*filterlist*/);
     for(int i=0;i<filelist.size();++i)
     {
         QString file = filelist[i];
         QTreeWidgetItem *item = new QTreeWidgetItem;
         item->setData(1,Qt::DisplayRole,file);
         ui->treeWidget->addTopLevelItem(item);
+        QCheckBox *checkbox = new QCheckBox();
+        ui->treeWidget->setItemWidget(item,0,checkbox);
     }
 
 
@@ -35,6 +36,7 @@ TreeWidget::TreeWidget(QWidget *parent) :
 //    stringlist.push_back("LastModify");
 //    stringlist.push_back("Type");
 //    stringlist.push_back("Size");
+//    stringlist.push_back("Other");
 //    ui->treeWidget->setHeaderLabels(stringlist);
 //    TreeAddItem("file1","20171111-111111",0,123412347567);
 //    TreeAddItem("file2","20171111-222222",1,234678);

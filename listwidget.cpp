@@ -81,5 +81,5 @@ void ListWidget::OnListContextMenu(const QPoint &pos)
     {
         menu.addAction(ui->actionDel);
     }
-    menu.exec(this->pos()+ui->listWidget->pos()+pos);
+    menu.exec(this->mapToGlobal(QPoint(0,0))+ui->listWidget->pos()+pos);
 }
