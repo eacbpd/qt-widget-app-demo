@@ -17,14 +17,14 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>eacbpd_widget_app</string>
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
     <item>
      <widget class="QTabWidget" name="MainTabWidget">
       <property name="currentIndex">
-       <number>5</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tab_1">
        <attribute name="title">
@@ -72,7 +72,7 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_6">
         <item>
-         <widget class="StackedWidget" name="widget" native="true"/>
+         <widget class="StackedWidget" name="widgetStack" native="true"/>
         </item>
        </layout>
       </widget>
@@ -82,7 +82,59 @@
        </attribute>
        <layout class="QHBoxLayout" name="horizontalLayout_7">
         <item>
-         <widget class="Painter" name="widget_2" native="true"/>
+         <widget class="Painter" name="widgetPainter" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_7">
+       <attribute name="title">
+        <string>NetWork</string>
+       </attribute>
+       <layout class="QHBoxLayout" name="horizontalLayout_8">
+        <item>
+         <widget class="NetWork" name="widgetNetWork" native="true"/>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_8">
+       <attribute name="title">
+        <string>MySeekBar</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>349</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="SeekBar" name="widgetSeekBar" native="true">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>0</width>
+            <height>80</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>16777215</width>
+            <height>80</height>
+           </size>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -179,6 +231,18 @@
    <class>Painter</class>
    <extends>QWidget</extends>
    <header>painter.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>NetWork</class>
+   <extends>QWidget</extends>
+   <header>network.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>SeekBar</class>
+   <extends>QWidget</extends>
+   <header>seekbar.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

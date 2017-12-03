@@ -4,7 +4,8 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui\
+            network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -21,7 +22,9 @@ SOURCES += main.cpp\
     tabwidget.cpp \
     stackedwidget.cpp \
     notepad.cpp \
-    painter.cpp
+    painter.cpp \
+    network.cpp \
+    seekbar.cpp
 
 
 
@@ -33,7 +36,9 @@ HEADERS  += mainwindow.h \
     tabwidget.h \
     stackedwidget.h \
     notepad.h \
-    painter.h
+    painter.h \
+    network.h \
+    seekbar.h
 
 
 
@@ -44,8 +49,11 @@ FORMS    += mainwindow.ui \
     tabwidget.ui \
     stackedwidget.ui \
     notepad.ui \
-    painter.ui
+    painter.ui \
+    network.ui \
+    seekbar.ui
 
 
 RESOURCES += \
-    resource.qrc
+    resource.qrc \
+    player_res.qrc

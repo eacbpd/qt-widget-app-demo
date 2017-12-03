@@ -11,6 +11,7 @@ MainWindow::MainWindow(QWidget *parent) :
     m_timelab = new QLabel();
     m_timelab->setMinimumWidth(100);
     m_timelab->setAlignment(Qt::AlignHCenter);
+    m_timelab->setText("00:00:00 上午");
     ui->statusBar->addWidget(m_timelab);
 
     //ui->statusBar->showMessage("loging...",5000);
