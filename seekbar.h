@@ -29,6 +29,7 @@ public:
     virtual void mouseMoveEvent(QMouseEvent *event);
 
     void onFullScreen();
+    void keyPressEvent(QKeyEvent *event);
 private:
     Ui::SeekBar *ui;
     QWidget *m_parent;

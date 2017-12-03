@@ -25,7 +25,13 @@ void SeekBar::onFullScreen()
         m_parent->showNormal();
     }
 }
-
+void SeekBar::keyPressEvent(QKeyEvent *keyset)
+{
+    if(keyset->key()==Qt::Key_Escape){
+        m_parent->setWindowFlags (Qt::Widget);
+        m_parent->showNormal ();
+    }
+}
 SeekBar::~SeekBar()
 {
     delete ui;
