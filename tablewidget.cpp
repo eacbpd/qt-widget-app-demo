@@ -1,8 +1,9 @@
 #include "tablewidget.h"
 #include "ui_tablewidget.h"
 #include <QHeaderView>
-#include <QVariant>
 #include <QTableWidgetItem>
+#include <QDebug>
+#include <QColor>
 TableWidget::TableWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::TableWidget),
@@ -19,7 +20,6 @@ TableWidget::TableWidget(QWidget *parent) :
     stringlist.push_back("QQ");
     ui->tableWidget->setColumnCount(4);
     ui->tableWidget->setHorizontalHeaderLabels(stringlist);
-
 
     QHeaderView *headerGoods = ui->tableWidget->horizontalHeader();
     //SortIndicator为水平标题栏文字旁边的三角指示器
@@ -115,13 +115,15 @@ void TableWidget::saveTable()
 
 void TableWidget::filterChanged()
 {
+    QList<QTableWidgetItem *> qlqth = ui->tableWidget->selectedItems();
+    for(auto a:qlqth)
+        a->setSelected(false);
     QString str = ui->lineEdit->text();
-    //QList<QTableWidgetItem *> qlqt = ui->tableWidget->findItems(str,Qt::MatchContains);
-    const QVariant qv(str);
     if(str.length()>0)
     {
-      //  ui->tableWidget->model()->match(ui->tableWidget->model(),Qt::DisplayRole,qv);
-
+        QList<QTableWidgetItem *> qlqt = ui->tableWidget->findItems(str,Qt::MatchContains);
+        for(auto &a:qlqt)
+            a->setSelected(true);
     }
 }
 
